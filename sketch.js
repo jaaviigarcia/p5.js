@@ -1,21 +1,22 @@
-//corre solo una vez cuando inicia el programa
 function setup(){
-    console.log("setup");
-    
-    //createCanvas: ancho, alto en píxeles
-    createCanvas(800,300);
+createCanvas(200, 200);
+background('grey');
+}
+function draw(){
+    fill(125);
+rect(90,90, 25,25);
 
-    //background RGB : Define el color del fondo
-    // RED --> background(255,0,0);
-    // GREEN --> background(0,255, 0);
-    // BLUE --> background(0,255, 0);
 
+if(mouseX<100 && mouseY<100){
+    fill('green');
+}else if(mouseX>100 && mouseY<100){
+    fill('red');
+}else if(mouseX>100 && mouseY>100){
+    fill('yellow');
+} else if(mouseX<100 && mouseY>100){
+    fill('blue');
 }
 
-//corre continuamente después de la función setup
-function draw(){
-    console.log("draw");
-    
-      //instrucciones a ejecutar en bucle
+ellipse(mouseX,mouseY, 25,25);
 
 }
